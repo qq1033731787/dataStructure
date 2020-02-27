@@ -3,10 +3,11 @@ project(dataStructure)
 
 set(CMAKE_CXX_STANDARD 14)
 
-include_directories(.)
+add_subdirectory(./googletest)
+include_directories(./link ./googletest/googletest/include ./stack ./queue . ./string)
+link_directories(./googletest ./cmake-build-debug/lib)
+
 
 add_executable(dataStructure
-        link/Link.h
-        link/main.cpp
-        link/test.cpp
-        link/test.h stack/calculater.cpp link/test1.cpp stack/tononrecursive.cpp queue/queue.cpp queue/queue.h queue/test.cpp stack/reverseStack.cpp stack/stack.h stack/main.cpp stack/calculater2.cpp stack/deque.cpp)
+             Tree/main.cpp)
+target_link_libraries(dataStructure gtest pthread)

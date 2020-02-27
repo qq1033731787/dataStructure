@@ -309,7 +309,7 @@ bool stackQueue<T>::getFront(T& item) {
 template <class T>
 deque<T>::deque() {
     arr = new T[DefaultSize];
-    front =
+    front = 0;
 }
 
 #endif //DATASTRUCTURE_QUEUE_H

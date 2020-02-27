@@ -6,7 +6,7 @@
 #include <map>
 #include <iostream>
 #include <string>
-#include "string.h"
+#include "string1.h"
 
 std::string preToPost(std::string);
 float calculate(std::string);
