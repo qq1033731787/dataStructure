@@ -56,28 +56,28 @@ include CMakeFiles/dataStructure.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/dataStructure.dir/flags.make
 
-CMakeFiles/dataStructure.dir/Tree/main.cpp.obj: CMakeFiles/dataStructure.dir/flags.make
-CMakeFiles/dataStructure.dir/Tree/main.cpp.obj: CMakeFiles/dataStructure.dir/includes_CXX.rsp
-CMakeFiles/dataStructure.dir/Tree/main.cpp.obj: ../Tree/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\code\dataStructure\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/dataStructure.dir/Tree/main.cpp.obj"
-	E:\X86_64~2.0-R\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\dataStructure.dir\Tree\main.cpp.obj -c E:\code\dataStructure\Tree\main.cpp
+CMakeFiles/dataStructure.dir/sort/main.cpp.obj: CMakeFiles/dataStructure.dir/flags.make
+CMakeFiles/dataStructure.dir/sort/main.cpp.obj: CMakeFiles/dataStructure.dir/includes_CXX.rsp
+CMakeFiles/dataStructure.dir/sort/main.cpp.obj: ../sort/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\code\dataStructure\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/dataStructure.dir/sort/main.cpp.obj"
+	E:\X86_64~2.0-R\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\dataStructure.dir\sort\main.cpp.obj -c E:\code\dataStructure\sort\main.cpp
 
-CMakeFiles/dataStructure.dir/Tree/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dataStructure.dir/Tree/main.cpp.i"
-	E:\X86_64~2.0-R\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\code\dataStructure\Tree\main.cpp > CMakeFiles\dataStructure.dir\Tree\main.cpp.i
+CMakeFiles/dataStructure.dir/sort/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dataStructure.dir/sort/main.cpp.i"
+	E:\X86_64~2.0-R\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\code\dataStructure\sort\main.cpp > CMakeFiles\dataStructure.dir\sort\main.cpp.i
 
-CMakeFiles/dataStructure.dir/Tree/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dataStructure.dir/Tree/main.cpp.s"
-	E:\X86_64~2.0-R\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\code\dataStructure\Tree\main.cpp -o CMakeFiles\dataStructure.dir\Tree\main.cpp.s
+CMakeFiles/dataStructure.dir/sort/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dataStructure.dir/sort/main.cpp.s"
+	E:\X86_64~2.0-R\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\code\dataStructure\sort\main.cpp -o CMakeFiles\dataStructure.dir\sort\main.cpp.s
 
 # Object files for target dataStructure
 dataStructure_OBJECTS = \
-"CMakeFiles/dataStructure.dir/Tree/main.cpp.obj"
+"CMakeFiles/dataStructure.dir/sort/main.cpp.obj"
 
 # External object files for target dataStructure
 dataStructure_EXTERNAL_OBJECTS =
 
-dataStructure.exe: CMakeFiles/dataStructure.dir/Tree/main.cpp.obj
+dataStructure.exe: CMakeFiles/dataStructure.dir/sort/main.cpp.obj
 dataStructure.exe: CMakeFiles/dataStructure.dir/build.make
 dataStructure.exe: lib/libgtestd.a
 dataStructure.exe: CMakeFiles/dataStructure.dir/linklibs.rsp

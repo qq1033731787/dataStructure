@@ -220,32 +220,32 @@ gtest_main/fast:
 	$(MAKE) -f googletest\googletest\CMakeFiles\gtest_main.dir\build.make googletest/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
-Tree/main.obj: Tree/main.cpp.obj
+sort/main.obj: sort/main.cpp.obj
 
-.PHONY : Tree/main.obj
+.PHONY : sort/main.obj
 
 # target to build an object file
-Tree/main.cpp.obj:
-	$(MAKE) -f CMakeFiles\dataStructure.dir\build.make CMakeFiles/dataStructure.dir/Tree/main.cpp.obj
-.PHONY : Tree/main.cpp.obj
+sort/main.cpp.obj:
+	$(MAKE) -f CMakeFiles\dataStructure.dir\build.make CMakeFiles/dataStructure.dir/sort/main.cpp.obj
+.PHONY : sort/main.cpp.obj
 
-Tree/main.i: Tree/main.cpp.i
+sort/main.i: sort/main.cpp.i
 
-.PHONY : Tree/main.i
+.PHONY : sort/main.i
 
 # target to preprocess a source file
-Tree/main.cpp.i:
-	$(MAKE) -f CMakeFiles\dataStructure.dir\build.make CMakeFiles/dataStructure.dir/Tree/main.cpp.i
-.PHONY : Tree/main.cpp.i
+sort/main.cpp.i:
+	$(MAKE) -f CMakeFiles\dataStructure.dir\build.make CMakeFiles/dataStructure.dir/sort/main.cpp.i
+.PHONY : sort/main.cpp.i
 
-Tree/main.s: Tree/main.cpp.s
+sort/main.s: sort/main.cpp.s
 
-.PHONY : Tree/main.s
+.PHONY : sort/main.s
 
 # target to generate assembly for a file
-Tree/main.cpp.s:
-	$(MAKE) -f CMakeFiles\dataStructure.dir\build.make CMakeFiles/dataStructure.dir/Tree/main.cpp.s
-.PHONY : Tree/main.cpp.s
+sort/main.cpp.s:
+	$(MAKE) -f CMakeFiles\dataStructure.dir\build.make CMakeFiles/dataStructure.dir/sort/main.cpp.s
+.PHONY : sort/main.cpp.s
 
 # Help Target
 help:
@@ -264,9 +264,9 @@ help:
 	@echo ... gmock
 	@echo ... gtest
 	@echo ... gtest_main
-	@echo ... Tree/main.obj
-	@echo ... Tree/main.i
-	@echo ... Tree/main.s
+	@echo ... sort/main.obj
+	@echo ... sort/main.i
+	@echo ... sort/main.s
 .PHONY : help
 
 

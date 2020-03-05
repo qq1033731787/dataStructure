@@ -328,9 +328,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="E:/code/dataStructure/Tree/main.cpp">
-			<Option target="dataStructure"/>
-		</Unit>
 		<Unit filename="E:/code/dataStructure/googletest/googlemock/src/gmock-all.cc">
 			<Option target="gmock"/>
 		</Unit>
@@ -342,6 +339,9 @@
 		</Unit>
 		<Unit filename="E:/code/dataStructure/googletest/googletest/src/gtest_main.cc">
 			<Option target="gtest_main"/>
+		</Unit>
+		<Unit filename="E:/code/dataStructure/sort/main.cpp">
+			<Option target="dataStructure"/>
 		</Unit>
 		<Unit filename="E:/code/dataStructure/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

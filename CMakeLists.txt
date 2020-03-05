@@ -9,5 +9,5 @@ link_directories(./googletest ./cmake-build-debug/lib)
 
 
 add_executable(dataStructure
-             Tree/main.cpp)
+                sort/main.cpp)
 target_link_libraries(dataStructure gtest pthread)
