@@ -16,20 +16,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf06e67e-cc76-462e-8e47-acf891ab567a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Tree/Tree.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sort/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sort/mysort.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tree/test.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tree/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Tree/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dataStructure.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dataStructure.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dataStructure.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dataStructure.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dataStructure.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dataStructure.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dataStructure.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dataStructure.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dataStructure.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dataStructure.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dataStructure.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/dataStructure.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/dataStructure.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/dataStructure.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sort/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sort/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sort/mysort.h" beforeDir="false" afterPath="$PROJECT_DIR$/sort/mysort.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,6 +167,14 @@
       <workItem from="1583404084589" duration="598000" />
       <workItem from="1583411685031" duration="3190000" />
       <workItem from="1583422144798" duration="2433000" />
+      <workItem from="1583450169415" duration="3420000" />
+      <workItem from="1583457563399" duration="46000" />
+      <workItem from="1583487851095" duration="1636000" />
+      <workItem from="1583637096089" duration="21302000" />
+      <workItem from="1583677205511" duration="5479000" />
+      <workItem from="1583727439687" duration="580000" />
+      <workItem from="1583805380415" duration="2607000" />
+      <workItem from="1584063889798" duration="598000" />
     </task>
     <servers />
   </component>
@@ -199,6 +198,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="391" y="84" key="#gtest/0.0.1366.728@0.0.1366.728" timestamp="1581510060292" />
+    <state width="392" height="466" key="DebuggerActiveHint" timestamp="1583667186666">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="392" height="466" key="DebuggerActiveHint/0.0.1366.768@0.0.1366.768" timestamp="1583667186666" />
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1581574806494">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -207,46 +210,46 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="434" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1581506859136" />
-    <state width="1322" height="205" key="GridCell.Tab.0.bottom" timestamp="1583414890578">
+    <state width="1322" height="232" key="GridCell.Tab.0.bottom" timestamp="1583684158523">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1322" height="113" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582818313297" />
-    <state width="1322" height="205" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1583414890578" />
-    <state width="1322" height="205" key="GridCell.Tab.0.center" timestamp="1583414890578">
+    <state width="1322" height="232" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1583684158523" />
+    <state width="1322" height="232" key="GridCell.Tab.0.center" timestamp="1583684158523">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1322" height="113" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582818313297" />
-    <state width="1322" height="205" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1583414890578" />
-    <state width="1322" height="205" key="GridCell.Tab.0.left" timestamp="1583414890578">
+    <state width="1322" height="232" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1583684158523" />
+    <state width="1322" height="232" key="GridCell.Tab.0.left" timestamp="1583684158523">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1322" height="113" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582818313297" />
-    <state width="1322" height="205" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1583414890578" />
-    <state width="1322" height="205" key="GridCell.Tab.0.right" timestamp="1583414890578">
+    <state width="1322" height="232" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1583684158523" />
+    <state width="1322" height="232" key="GridCell.Tab.0.right" timestamp="1583684158523">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1322" height="113" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582818313297" />
-    <state width="1322" height="205" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1583414890578" />
-    <state width="1322" height="205" key="GridCell.Tab.1.bottom" timestamp="1583414890579">
+    <state width="1322" height="232" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1583684158523" />
+    <state width="1322" height="232" key="GridCell.Tab.1.bottom" timestamp="1583684158523">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1322" height="154" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582813307237" />
-    <state width="1322" height="205" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1583414890579" />
-    <state width="1322" height="205" key="GridCell.Tab.1.center" timestamp="1583414890578">
+    <state width="1322" height="232" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1583684158523" />
+    <state width="1322" height="232" key="GridCell.Tab.1.center" timestamp="1583684158523">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1322" height="154" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1582813307237" />
-    <state width="1322" height="205" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1583414890578" />
-    <state width="1322" height="205" key="GridCell.Tab.1.left" timestamp="1583414890578">
+    <state width="1322" height="232" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1583684158523" />
+    <state width="1322" height="232" key="GridCell.Tab.1.left" timestamp="1583684158523">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1322" height="154" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1582813307237" />
-    <state width="1322" height="205" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1583414890578" />
-    <state width="1322" height="205" key="GridCell.Tab.1.right" timestamp="1583414890578">
+    <state width="1322" height="232" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1583684158523" />
+    <state width="1322" height="232" key="GridCell.Tab.1.right" timestamp="1583684158523">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1322" height="154" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1582813307237" />
-    <state width="1322" height="205" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1583414890578" />
+    <state width="1322" height="232" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1583684158523" />
     <state x="184" y="0" key="SettingsEditor" timestamp="1582545022502">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -255,11 +258,19 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1582523318173" />
-    <state x="277" y="170" key="com.intellij.ide.util.TipDialog" timestamp="1583450357073">
+    <state x="277" y="170" key="com.intellij.ide.util.TipDialog" timestamp="1584065701679">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="277" y="161" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582815729962" />
-    <state x="277" y="170" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1583450357073" />
+    <state x="277" y="170" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1584065701679" />
+    <state x="475" y="300" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583680909444">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="475" y="300" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.768@0.0.1366.768" timestamp="1583680909444" />
+    <state x="0" y="0" width="647" height="768" key="find.popup" timestamp="1583669808686">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="0" y="0" width="647" height="768" key="find.popup/0.0.1366.768@0.0.1366.768" timestamp="1583669808686" />
     <state x="550" y="256" key="publish.login" timestamp="1581160875472">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -268,6 +279,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1581079686261" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1583662831603">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1583662831603" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

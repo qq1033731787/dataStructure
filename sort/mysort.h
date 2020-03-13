@@ -6,7 +6,10 @@
 #define DATASTRUCTURE_MYSORT_H
 
 #include <cmath>
+#include <fstream>
+#include <iostream>
 
+int t = INT_MAX;
 void insertSort(int* arr, int size){
     int tmp;
     for(int i = 1;i < size;i++){
@@ -139,32 +142,6 @@ void mergeSort(int* arr, int i, int j){
     }
 }
 
-void bucketSort(int* arr, int size){
-    int* count = new int[10];
-    int* tmp = new int[size];
-    int i ;
-
-    for(i = 0;i < size;i++){
-        tmp[i] = arr[i];
-    }
-    for(i = 0;i < 10;i++){
-        count[i] = 0;
-    }
-
-    for(i = 0;i < size;i++){
-        count[arr[i]]++;
-    }
-
-    for(i = 1;i < 10;i++){
-        count[i] = count[i] + count[i - 1];
-    }
-
-    for(i = size - 1;i >= 0;i--){
-        arr[--count[tmp[i]]] = tmp[i];
-    }
-    delete[] tmp;
-    delete[] count;
-}
 
 void radixSort(int* arr, int n, int d, int r){
     int* count = new int[r];
@@ -310,5 +287,304 @@ void indexSort(int* arr, int size){
     }
 }
 
+class matrix{
+private:
+    int* count;
+    int  size;
+    int  m[8][8];
+public:
+    matrix() = default;
+    matrix(int m[][8], int size){
+        for(int i = 0;i < 8;i++){
+            for(int j = 0;j < 8;j++){
+                this->m[i][j] = m[i][j];
+            }
+        }
+
+        this->size = size;
+        count = new int[size];
+        for(int i = 0;i < size;i++){
+            count[i] = 0;
+        }
+    }
+
+    int& operator [] (int index){
+        if(count[index] < size){
+            int ret = m[index][count[index]];
+            return m[index][count[index]];
+        }
+        return t;
+    }
+
+    void add(int index){
+        count[index]++;
+    }
+};
+
+template <class T>
+class loserTree{
+private:
+    int maxSize;
+    int n;
+    int lowExt;
+    int offset;
+    int* B;
+    T exts;
+    int internalNodes;
+    int win;
+    void Play(int p, int lc, int rc);
+    int winner(int a, int b){
+        int aa = exts[a];
+        int bb = exts[b];
+        return exts[a] <= exts[b] ? a : b;
+    }
+    int loser(int a, int b){
+        return exts[a] <= exts[b] ? b : a;
+    }
+
+
+public:
+    loserTree(T& exts, int size){
+        n = size;
+        B = new int[n - 1];
+        this->exts = exts;
+        for(internalNodes = 1;internalNodes <= n - 1;internalNodes = (internalNodes + 1) * 2 - 1);
+        lowExt = 2 * (n - 1 - ((internalNodes + 1) / 2 - 1));
+        offset = internalNodes;
+    }
+    ~loserTree(){
+        delete[] B;
+    }
+    int getParent(int i){
+        if(i < lowExt){
+            return (i + offset - 1) / 2;
+        }else{
+            return (i + 1 - lowExt +  n - 2 - 1) / 2;
+        }
+    }
+    void init();
+    void replay(int);
+
+    int remove(){
+        std::cout<< exts[win] << std::endl;
+        exts.add(win);
+        return win;
+    }
+    void print(){
+        std::cout<< win + 1 << std::endl;
+        for(int x = 0;x < n - 1;x++){
+            std::cout<< B[x] + 1 << std::endl;
+        }
+        std::cout<< "\n\n\n";
+    }
+};
+
+template <class T>
+void loserTree<T>::Play(int p, int lc, int rc) {
+    B[p] = loser(lc, rc);
+    int tmp1 = winner(lc, rc);
+    while(p > 0 && p % 2 == 0){
+        int tmp2 = winner(B[(p - 1) / 2], tmp1);
+        B[(p - 1) / 2] = loser(B[(p - 1) / 2], tmp1);
+        tmp1 = tmp2;
+        p = (p - 1) / 2;
+    }
+
+    if(p == 0){
+        win = tmp1;
+    } else{
+        B[(p - 1) / 2] = tmp1;
+    }
+}
+
+template <class T>
+void loserTree<T>::init() {
+    int i;
+    for(i = 1;i < lowExt;i += 2){
+        Play(getParent(i), i - 1, i);
+    }
+
+    i = lowExt;
+    if(n % 2){
+        Play(getParent(i), B[getParent(i)], i);
+        i += 2;
+    }else{
+        i++;
+    }
+
+    for(;i < n;i += 2){
+        Play(getParent(i), i - 1, i);
+    }
+    //print();
+}
+
+template <class T>
+void loserTree<T>::replay(int loc) {
+    int p = getParent(loc);
+    win = winner(B[p], loc);
+    B[p] = loser(B[p], loc);
+    while(p > 0){
+        int tmp = winner(win, B[(p - 1) / 2]);
+        B[(p - 1) / 2] = loser(win, B[(p - 1) / 2]);
+        win = tmp;
+        p = (p - 1) / 2;
+    }
+    //print();
+}
+
+
+template <class T>
+class minHeap{
+private:
+    T* arr;
+    std::ifstream* stream;
+    int ssize;
+    int curSize;
+    int maxSize;
+    void swap(int i, int j);
+    void buildHeap();
+    int count;
+    T pre;
+public:
+    minHeap(T* tree, int size, int maxsize, std::ifstream* s){
+        arr = tree;
+        curSize = size;
+        maxSize = maxsize;
+        count = 0;
+        buildHeap();
+        this->stream = s;
+    }
+    ~minHeap() = default;
+    int getLeft(int i){return 2*i + 1;}
+    int getRight(int i){return 2*i + 2;}
+    T removeMin();
+    bool insert(T);
+    bool insert2(T);
+    void siftUp(int pos);
+    void siftDown(int pos);
+    void replaceSort();
+};
+
+template <class T>
+void minHeap<T>::swap(int i, int j) {
+    T tmp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = tmp;
+}
+
+template <class T>
+void minHeap<T>::siftDown(int pos) {
+    int tmp = pos;
+    while(2 * tmp + 1 < curSize){
+        int child = 2 * tmp + 1;
+        if(child + 1 < curSize && arr[child + 1] < arr[child]){
+            child = child + 1;
+        }
+        if(arr[child] <arr[tmp]){
+            swap(child, tmp);
+            tmp = child;
+        }else{
+            break;
+        }
+    }
+}
+
+template <class T>
+void minHeap<T>::siftUp(int pos) {
+    int tmp = pos;
+    while(tmp > 0){
+        int parent = (tmp - 1) / 2;
+        if(arr[parent] > arr[tmp]){
+            swap(parent, tmp);
+            tmp = parent;
+        } else{
+            break;
+        }
+    }
+}
+
+template <class T>
+bool minHeap<T>::insert(const T item) {
+    if(curSize >= maxSize){
+        return false;
+    }
+
+    arr[curSize++] = item;
+    siftUp(curSize - 1);
+    return true;
+}
+
+template <class T>
+bool minHeap<T>::insert2(const T item) {
+    if(curSize >= maxSize){
+        std::cout<< "> maxSize" << "\n";
+        return false;
+    }
+
+    if(item < pre){
+        if(count >= maxSize){
+            return false;
+        }
+        arr[maxSize - 1 - count] = item;
+        count++;
+        return true;
+    }
+
+    arr[curSize++] = item;
+    siftUp(curSize - 1);
+    return true;
+}
+
+template <class T>
+T minHeap<T>::removeMin() {
+    if(curSize == 0){
+        exit(1);
+    }
+
+    T ret = arr[0];
+    arr[0] = arr[curSize - 1];
+    curSize--;
+    siftDown(0);
+    std::cout<< ret << std::endl;
+    return ret;
+}
+
+template <class T>
+void minHeap<T>::buildHeap() {
+    for(int i = curSize / 2 - 1;i >= 0;i--){
+        siftDown(i);
+    }
+}
+
+template <class T>
+void minHeap<T>::replaceSort() {
+    pre = removeMin();
+    int i = 0;
+    while(!stream->eof() && i < 20){
+        i++;
+        int tmp;
+        (*stream) >> tmp;
+
+        if(!insert2(tmp) || curSize <= 0){
+            break;
+        }
+        pre = removeMin();
+    }
+    while(curSize > 0){
+        removeMin();
+    }
+
+    std::cout<< "\nIts Over: now heap is\n ";
+    for(int i = 0;i < count;i++){
+        std::cout<< arr[maxSize - i - 1] << std::endl;
+    }
+    std::cout<< "\n\n\n";
+
+    stream->close();
+}
+
+
 
 #endif //DATASTRUCTURE_MYSORT_H
+
+
