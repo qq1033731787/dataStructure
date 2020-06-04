@@ -26,6 +26,7 @@ public:
         auto ret = new std::list<TreeNode<T>*>();
         return *ret;
     }
+    virtual int getChildsNum() = 0;
 };
 
 template <class T>
@@ -116,7 +117,8 @@ public:
     void setSibing(TreeNode<T>*);
     void setNext(TreeNode<T>*);
     bool isLeaf();
-    std::list<TreeNode<T>*>& getChilds() {return childs;}
+    std::list<TreeNode<T>*>& getChilds(){return childs;}
+    int getChildsNum(){return childs.size();}
 };
 
 template <class T>

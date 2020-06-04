@@ -4,15 +4,18 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "E:/code/dataStructure/sort/main.cpp" "E:/code/dataStructure/cmake-build-debug/CMakeFiles/dataStructure.dir/sort/main.cpp.obj"
+  "E:/code/dataStructure/graph/main.cpp" "E:/code/dataStructure/cmake-build-debug/CMakeFiles/dataStructure.dir/graph/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  ".././graph"
+  ".././Tree"
   ".././link"
   ".././googletest/googletest/include"
   ".././stack"
+  ".././search"
   ".././queue"
   "../."
   ".././string"

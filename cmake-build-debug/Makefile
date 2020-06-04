@@ -220,32 +220,32 @@ gtest_main/fast:
 	$(MAKE) -f googletest\googletest\CMakeFiles\gtest_main.dir\build.make googletest/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
-sort/main.obj: sort/main.cpp.obj
+graph/main.obj: graph/main.cpp.obj
 
-.PHONY : sort/main.obj
+.PHONY : graph/main.obj
 
 # target to build an object file
-sort/main.cpp.obj:
-	$(MAKE) -f CMakeFiles\dataStructure.dir\build.make CMakeFiles/dataStructure.dir/sort/main.cpp.obj
-.PHONY : sort/main.cpp.obj
+graph/main.cpp.obj:
+	$(MAKE) -f CMakeFiles\dataStructure.dir\build.make CMakeFiles/dataStructure.dir/graph/main.cpp.obj
+.PHONY : graph/main.cpp.obj
 
-sort/main.i: sort/main.cpp.i
+graph/main.i: graph/main.cpp.i
 
-.PHONY : sort/main.i
+.PHONY : graph/main.i
 
 # target to preprocess a source file
-sort/main.cpp.i:
-	$(MAKE) -f CMakeFiles\dataStructure.dir\build.make CMakeFiles/dataStructure.dir/sort/main.cpp.i
-.PHONY : sort/main.cpp.i
+graph/main.cpp.i:
+	$(MAKE) -f CMakeFiles\dataStructure.dir\build.make CMakeFiles/dataStructure.dir/graph/main.cpp.i
+.PHONY : graph/main.cpp.i
 
-sort/main.s: sort/main.cpp.s
+graph/main.s: graph/main.cpp.s
 
-.PHONY : sort/main.s
+.PHONY : graph/main.s
 
 # target to generate assembly for a file
-sort/main.cpp.s:
-	$(MAKE) -f CMakeFiles\dataStructure.dir\build.make CMakeFiles/dataStructure.dir/sort/main.cpp.s
-.PHONY : sort/main.cpp.s
+graph/main.cpp.s:
+	$(MAKE) -f CMakeFiles\dataStructure.dir\build.make CMakeFiles/dataStructure.dir/graph/main.cpp.s
+.PHONY : graph/main.cpp.s
 
 # Help Target
 help:
@@ -264,9 +264,9 @@ help:
 	@echo ... gmock
 	@echo ... gtest
 	@echo ... gtest_main
-	@echo ... sort/main.obj
-	@echo ... sort/main.i
-	@echo ... sort/main.s
+	@echo ... graph/main.obj
+	@echo ... graph/main.i
+	@echo ... graph/main.s
 .PHONY : help
 
 

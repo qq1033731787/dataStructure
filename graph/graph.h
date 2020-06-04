@@ -36,6 +36,9 @@ public:
     static bool isEdge(Edge e){
         return e.from >= 0 && e.to >= 0 && e.weight > 0 && e.weight < INT_MAX;
     }
+    virtual bool isEdge(int from, int to) = 0;
+
+    virtual int getDegree(int) = 0;
 };
 
 Graph::Graph(int vernum) {
@@ -65,6 +68,8 @@ public:
     Edge nextEdge(Edge preEdge) override;
     bool setEdge(int from, int to, int weight) override;
     bool delEdge(int from, int to) override;
+    int getDegree(int vertex) override;
+    bool isEdge(int from, int to) override;
 };
 
 Graphm::Graphm(int vernum) : Graph(vernum) {
@@ -88,6 +93,20 @@ Graphm::~Graphm() {
         delete[] matrix[i];
     }
     delete[] matrix;
+}
+
+int Graphm::getDegree(int vertex) {
+    int ret;
+    for(int i = 0;i < vertexNum;i++){
+        if(matrix[vertex][i] != 0 && matrix[vertex][i] != INT_MAX){
+            ret++;
+        }
+    }
+    return ret;
+}
+
+bool Graphm::isEdge(int from, int to){
+    return matrix[from][to] != 0 && matrix[from][to] != INT_MAX;
 }
 
 Edge Graphm::firstEdge(int vertex) {
@@ -537,64 +556,66 @@ void Kruskal(Graph& graph){
     }
 }
 
-int main(){
-    Graph* mg = new Graphm(7);
-    mg->setEdge(0, 1, 20);
-    //mg->setEdge(0, 3, 2);
-    mg->setEdge(0, 4, 1);
-    mg->setEdge(1, 2, 6);
-    mg->setEdge(1, 3, 4);
-    mg->setEdge(2, 6, 2);
-    mg->setEdge(3, 5, 12);
-    mg->setEdge(3, 6, 8);
-    mg->setEdge(4, 5, 15);
-    mg->setEdge(5, 6, 10);
 
-    mg->setEdge(1, 0, 20);
-    mg->setEdge(4, 0, 1);
-    //mg->setEdge(3, 0, 2);
-    mg->setEdge(2, 1, 6);
-    mg->setEdge(3, 1, 4);
-    mg->setEdge(6, 2, 2);
-    mg->setEdge(5, 3, 12);
-    mg->setEdge(6, 3, 8);
-    mg->setEdge(5, 4, 15);
-    mg->setEdge(6, 5, 10);
 
-    Kruskal(*mg);
-//    mg->setEdge(0, 1, 10);
-//    mg->setEdge(0, 4, 100);
-//    mg->setEdge(0, 3, 30);
-//    mg->setEdge(1, 2, 50);
-//    mg->setEdge(2, 4, 10);
-//    mg->setEdge(3, 1, 10);
-//    mg->setEdge(3, 4, 60);
-//    mg->setEdge(3, 2, 20);
-
-//    for(Edge e = mg->firstEdge(0);Graph::isEdge(e);e = mg->nextEdge(e)){
-//        std::cout<< e.to << "       ~";
-//    }
-//    std::cout<< "\n\n\n\n";
-
-//    DFS(*mg, 0);
-//    fresh(*mg);
-//    std::cout<< std::endl;
+//int main(){
+//    Graph* mg = new Graphm(7);
+//    mg->setEdge(0, 1, 20);
+//    //mg->setEdge(0, 3, 2);
+//    mg->setEdge(0, 4, 1);
+//    mg->setEdge(1, 2, 6);
+//    mg->setEdge(1, 3, 4);
+//    mg->setEdge(2, 6, 2);
+//    mg->setEdge(3, 5, 12);
+//    mg->setEdge(3, 6, 8);
+//    mg->setEdge(4, 5, 15);
+//    mg->setEdge(5, 6, 10);
 //
-//    BFS(*mg, 0);
-//    fresh(*mg);
-//    std::cout<< std::endl;
+//    mg->setEdge(1, 0, 20);
+//    mg->setEdge(4, 0, 1);
+//    //mg->setEdge(3, 0, 2);
+//    mg->setEdge(2, 1, 6);
+//    mg->setEdge(3, 1, 4);
+//    mg->setEdge(6, 2, 2);
+//    mg->setEdge(5, 3, 12);
+//    mg->setEdge(6, 3, 8);
+//    mg->setEdge(5, 4, 15);
+//    mg->setEdge(6, 5, 10);
 //
-//    Topsort(*mg);
-//    fresh(*mg);
-//    std::cout<< std::endl;
+//    Kruskal(*mg);
+////    mg->setEdge(0, 1, 10);
+////    mg->setEdge(0, 4, 100);
+////    mg->setEdge(0, 3, 30);
+////    mg->setEdge(1, 2, 50);
+////    mg->setEdge(2, 4, 10);
+////    mg->setEdge(3, 1, 10);
+////    mg->setEdge(3, 4, 60);
+////    mg->setEdge(3, 2, 20);
 //
-//    Dijkstra(*mg, 0);
-//    fresh(*mg);
-//    std::cout<< std::endl;
+////    for(Edge e = mg->firstEdge(0);Graph::isEdge(e);e = mg->nextEdge(e)){
+////        std::cout<< e.to << "       ~";
+////    }
+////    std::cout<< "\n\n\n\n";
 //
-//    Floyd(*mg);
-//    fresh(*mg);
-//    std::cout<< std::endl;
-
-
-}
+////    DFS(*mg, 0);
+////    fresh(*mg);
+////    std::cout<< std::endl;
+////
+////    BFS(*mg, 0);
+////    fresh(*mg);
+////    std::cout<< std::endl;
+////
+////    Topsort(*mg);
+////    fresh(*mg);
+////    std::cout<< std::endl;
+////
+////    Dijkstra(*mg, 0);
+////    fresh(*mg);
+////    std::cout<< std::endl;
+////
+////    Floyd(*mg);
+////    fresh(*mg);
+////    std::cout<< std::endl;
+//
+//
+//}

@@ -2,9 +2,31 @@
 // Created by Administrator on 2020/2/24.
 
 //
+#include <algorithm>
 #include "BinaryTree.h"
 #include "Tree.h"
 #include <gtest/gtest.h>
+
+bool cmp(TreeNode<int> a, TreeNode<int> b){
+    return a.getChildsNum() > b.getChildsNum();
+}
+
+void mapDye(TreeNode<int>* mnodes, int size){
+    std::vector<bool> records(size, false);
+    int colors = 0;
+    int curDyedNum = 0;
+    std::sort(mnodes, mnodes + size);
+
+    records[0] = true;
+    colors++;
+    curDyedNum++;
+    int start = 0;
+    while(curDyedNum < size){
+
+    }
+
+
+}
 
 //TEST(binaryTree, minHeap){
 //    int* a = new int[20]{19, 8, 35, 65, 40, 3, 7,45};
