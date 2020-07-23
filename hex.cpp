@@ -24,7 +24,7 @@ void hex2bin(const char* src, unsigned char* target)
 }
 
 int main(){
-    const char* in = "810002000000b7878782e7979792e7a7a7a0c00ff0b00010000000008000200000000000000";
+    const char* in = "8100020e7979792e7a7a7a0c00ff0b00010000000008000200000000000000";
     int totalBytesRead = static_cast<int>(strlen(in)) / 2;
     unsigned char* tmp = new unsigned char[totalBytesRead];
     hex2bin(in, tmp);
