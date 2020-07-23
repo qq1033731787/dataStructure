@@ -24,22 +24,28 @@ int mapDye(){
 
     records[sorts[0]] = true;
     int curVertex = sorts[0];
+    std::vector<int> vertexs;
     while(curDyedNum < graph->vertexNum){
         curDyedNum++;
         colors++;
-        for(int i = 0;i < graph->vertexNum; i++){
-            if(!graph->isEdge(curVertex, i)){
-                records[i] = true;
-                curDyedNum++;
-            }
-        }
-
+        vertexs.push_back(curVertex);
         for(int i = 0;i < graph->vertexNum; i++){
             if(!records[sorts[i]]){
-                records[sorts[i]] = true;
-                curVertex = sorts[i];
+                int j;
+                for(j = 0;j < vertexs.size();j++){
+                    if(graph->isEdge(curVertex, vertexs[j])){
+                        break;
+                    }
+                }
+                if(j == vertexs.size()){
+                    records[sorts[i]] = true;
+                    curDyedNum++;
+                    curVertex = sorts[i];
+                    vertexs.push_back(curVertex);
+                }
             }
         }
+        vertexs.clear();
     }
     return colors;
 }

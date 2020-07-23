@@ -12,6 +12,19 @@ std::string preToPost(std::string);
 float calculate(std::string);
 
 std::map<char, int> _privilige;
+
+TEST(stack, calc){
+    _privilige['('] = 3;
+    _privilige['*'] = 2;
+    _privilige['/'] = 2;
+    _privilige['+'] = 1;
+    _privilige['-'] = 1;
+    _privilige[')'] = 0;
+    ASSERT_EQ(calculate(preToPost("1+1")), 2);
+    ASSERT_EQ(calculate(preToPost("(1+1)*2")), 4);
+    ASSERT_EQ(calculate(preToPost("((2+2)*(4*1+1))/(2*4+2)+2")), 4);
+}
+
 int main(){
     _privilige['('] = 3;
     _privilige['*'] = 2;
@@ -76,11 +89,9 @@ float calculate(std::string post){
                     break;
                 case '*':
                     ret = n1 * n2;
-                    std::cout<<n1 << "*"<< n2<< std::endl;
                     break;
                 case '/':
                     ret = n1 / n2;
-                    std::cout<<n1 << "/"<< n2<< std::endl;
                     break;
             }
             _s.push(ret);
